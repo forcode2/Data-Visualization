@@ -1,0 +1,38 @@
+% Basic Data Visualization Tool
+
+% Generate synthetic data
+x = linspace(0, 2*pi, 100); % x-values for the plots
+y = sin(x); % Sine wave
+y2 = cos(x); % Cosine wave
+data = randn(100, 1); % Random data for bar chart and histogram
+
+% Create a new figure
+figure;
+
+% Plot a sine wave
+subplot(2, 2, 1);
+plot(x, y);
+title('Sine Wave');
+xlabel('x');
+ylabel('sin(x)');
+
+% Plot a cosine wave
+subplot(2, 2, 2);
+plot(x, y2, 'r');
+title('Cosine Wave');
+xlabel('x');
+ylabel('cos(x)');
+
+% Plot a bar chart
+subplot(2, 2, 3);
+bar(data);
+title('Random Data Bar Chart');
+xlabel('Index');
+ylabel('Value');
+
+% Plot a histogram
+subplot(2, 2, 4);
+histogram(data, 10);
+title('Random Data Histogram');
+xlabel('Bins');
+ylabel('Frequency');
